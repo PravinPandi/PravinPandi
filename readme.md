@@ -2,7 +2,7 @@
 
 </div>
 Im Pravin 😊. <br>
-Raise issues if you think something could be better�
+Raise issues if you think something could be better
 
 <div align="center">
 
