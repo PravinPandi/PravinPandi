@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --dark-bg: rgba(15, 15, 15, 0.95);
+  --spacing: 350px;
+
+  font-family: cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  text-decoration: none;
+}
+
+h1,
+h2,
+blockquote {
+  font-family: cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header {
+  background: var(--dark-bg);
+  grid-column: 2 / span 5;
+  font-size: 2.5rem;
+  padding: 2rem;
+  margin-bottom: var(--spacing);
+}
+
+section {
+  font-weight: 400;
+  grid-column: 2 / 8;
+  padding: 1rem;
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / span 9;
+  margin-bottom: var(--spacing);
+}
+
+blockquote p {
+  color: black;
+  background-color: white;
+  font-size: 4rem;
+  display: inline-block;
+  line-height: 1;
+}
+
+.left {
+  grid-column: 6 / 12;
+}
+
+.social-menu {
+  position: absolute;
+  bottom: 0;
+  margin: left;
+  width: 100%;
+
+}
+
+.social-menu a {
+  font-size: 30px;
+  display: inline-flex;
+  width: 60px;
+  height: 60px;
+  background-color: #808080;
+  color: white;
+  margin: 0 9px;
+  border-radius: 50%;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.glow-on-hover {
+  font-size: 20px;
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+</style>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="logo.png" />
+  <title>Praveen</title>
+</head>
+
+<body>
+
+  <canvas id="bg"></canvas>
+
+  <main>
+    <header>
+      <h1>PRAVEEN PANDI</h1>
+      <P>🚀 Welcome to my Website </P>
+    </header>
+
+    <blockquote>
+      <p>I like to code and then make them publish </p>
+    </blockquote>
+
+    <section>
+      <h2>🤟About Me</h2>
+
+      <p>
+        I'm a Student, Learner and tech enthusiast, wants to become a Full Stack Web developer, Seeking for a beginner
+        role
+        willing to work in a challenging position with a growing Organization where I can utilize my technical and
+        interpersonal skills to serve the organization and enhanced the same and explore my technical knowledge, Always
+        willing to innovate the new things which can improve the existing technology, Im Pursuing my BCA degree from
+        Alpha
+        Art's and Science college. I'm great at working with JavaScript and Nodejs and love to create more stuffs and
+        make it publish on GitHub
+      </p>
+    </section>
+
+    <section>
+      <h2>🏆 Achievements </h2>
+      <p>
+        GDSC Lead 2021-2022 (Alpha Arts and Science College)
+        <br>We Conduct Techinal Sessions, Speaker Sessions and
+        Technologies related workshop in our club and teach them new technologies booming in the feild and to their area
+        of interest. Google Developer Student Clubs are university based community groups for students interested in
+        Google developer technologies. Students from all undergraduate or graduate programs with an interest in growing
+        as a developer are welcome.
+      </p>
+    </section>
+
+    <section class="light">
+      <h2>👩🏽‍🚀 Projects</h2>
+      <p>
+        I have done a user authentication backend application using nodejs, the main purpose of this project is to
+        safeguard our password, Users credentials stored in the application is hashed with different hashes, it
+        overwrites the password with hashes, so our password will be secured. Our original password remains the same it
+        just overwrites for security purpose.
+        This application uses express for server and bcrypt for hasing, the credentials looking forward to work on new
+        technologies and new projects.
+      </p>
+
+    </section>
+    <blockquote>
+      <p>"It's not a faith in technology. It's faith in people"<br>-Steve Jobs</p>
+    </blockquote>
+
+
+    <section class="light">
+      <h2>Don't Forget to check out my Resume 😜</h2>
+      <p>
+
+        <button class="glow-on-hover"><a
+            href="https://drive.google.com/file/d/1Z3a2evjagp9GNJ6ABxAZkGJpdUyKHV4-/view?usp=sharing"
+            style="text-decoration: none;">MY
+            RESUME</a></button>
+      </p>
+
+    </section>
+
+
+    <blockquote>
+      <p>Thank you for Visiting</p>
+    </blockquote>
+    <div class="social-menu">
+      <a href="https://www.facebook.com/pravin.chuck"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/praveen.pandi_/"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/Pravinprp"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/praveen-pandi/"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/PravinPandi"><i class="fab fa-github"></i></a>
+      <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=praveenpandi24@gmail.com&tf=1">
+        <i class="fab fa-google-plus-g"></i></a>
+    </div>
+  </main>
+  <script type="module" src="/main.js"></script>
+  <script src="https://kit.fontawesome.com/912ca1cc70.js" crossorigin="anonymous"></script>
+  <script src="threex.domevents.js"></script>
+</body>
+
+</html>
