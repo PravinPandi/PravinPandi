@@ -1,7 +1,7 @@
 <h1> Hii There..!</h1><div align="center" width="50">
 
 </div>
-Im Pravin 😊<br>
+Im Praveen 😊<br>
 Raise issues if you think something could be better
 
 <div align="center">
